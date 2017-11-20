@@ -1,9 +1,12 @@
 <h1>See all posts</h1>
 
 <%= link_to 'New Post', new_post_path %>
+<br>
+
 <% @posts.each do |post| %>
-<%= post.title %><br>
-<%= post.text %><br>
-<%= link_to 'Show More', post_path(post) %><br>
+<%= post.title %>
+<%= post.text %>
+<%= link_to 'Show More', post_path(post) %> -
+<%= link_to 'Edit Post', edit_post_path(post) %>
 <br>
 <% end %>
