@@ -1,0 +1,8 @@
+<h1>See all posts</h1>
+
+<% @posts.each do |post| %>
+<%= post.title %><br>
+<%= post.text %><br>
+<%= link_to 'Show More', post_path(post) %><br>
+<br>
+<% end %>
