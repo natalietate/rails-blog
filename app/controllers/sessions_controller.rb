@@ -15,6 +15,6 @@ end
 
   def logout
     session.clear
-    redirect_to '/login', notice: 'Successfully logged out. Bye!'
+    redirect_to '/', notice: 'Successfully logged out. Bye!'
   end
 end
