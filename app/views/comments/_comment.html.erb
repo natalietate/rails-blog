@@ -6,9 +6,10 @@
 <p>
   <strong>Comment:</strong>
   <%= comment.body %>
-  
+
   <strong>Posted by: </strong>
-  <%= comment.user_id %>
+  <%= comment.user.name %>
+
 </p>
 <p>
 <%= link_to 'Remove Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?'} %>
