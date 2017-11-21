@@ -7,6 +7,8 @@
 <%= post.title %>
 <%= post.text %>
 Posted by: <%= post.user_id %>
+Posted by: <%= User.find_by_id(user_id).name %>
+
 <%= link_to 'Show More', post_path(post) %> -
 <%= link_to 'Edit Post', edit_post_path(post) %>
 <%= link_to 'Remove Post', post_path(post), method: :delete, data: { confirm: 'Hey, are you sure you want to delete this post?'} %>
