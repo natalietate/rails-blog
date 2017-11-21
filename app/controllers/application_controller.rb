@@ -16,5 +16,17 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :sign_in, :current_user, :logged_in?
+  # Redirects if not logged in
+  def authenticate
+    unless logged_in?
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to '/posts' unless @user == current_user
+  end
+
+  helper_method :sign_in, :current_user, :logged_in?, :authenticate, :correct_user
 end

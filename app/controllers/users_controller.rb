@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate, only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update]
   def new
     @user = User.new
   end
@@ -10,6 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      sign_in
       redirect_to '/posts'
     else
       render 'new'
