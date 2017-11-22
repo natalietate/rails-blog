@@ -38,6 +38,17 @@ Post.create(
   text: 'Hello friends, Jeffry and I have been discussing this as of late. Which cheese do you prefer when you\'re having friends over for dinner?',
   user_id: 2
 )
+Post.create(
+  title: 'New head chef, not sure what to think.',
+  text: 'I come in today to do food ordering and office work, and he\'s not here. We give him a call finally and he just says something came up and he\'ll be in tomorrow.I\'ve been hoping for the best, but the first 4 days have left a lot of bad impressions. He just seems way too full of himself. What do you think?',
+  user_id: 3
+)
+
+Post.create(
+  title: 'Do me a favor: Please clean your grill.',
+  text: 'Your grill grate better be squeaky clean or food will absolutely, positively stick (especially high-protein items like meat). Not only will sticking badly damage the food, it removes those groovy (literally) grill marks.',
+  user_id: 4
+)
 
 Comment.create(
   body: 'Whatever you do, don\'t cook the stuffing inside of the turkey!',
