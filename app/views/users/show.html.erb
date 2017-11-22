@@ -1,11 +1,14 @@
-<h1> <%= @user.name%>'s Profile</h1>
+<div class="user-show">
+  <h1> <%= @user.name%>'s Profile</h1>
 
-Name: <%= @user.name %><br>
-Email: <%= @user.email %>
+  Name: <%= @user.name %><br>
+  Email: <%= @user.email %>
 
-<br><br>
-<% if @user.id == current_user.id %>
-<%= link_to 'Edit Profile', edit_user_path(current_user) %>
-<% end %>
-<br>
-<%= link_to 'Go Back', posts_path %>
+  <br><br>
+
+  <% if @user.id == current_user.id %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user) %>
+  <% end %>
+  <br>
+  <%= link_to 'Go Back', posts_path %>
+</div>
