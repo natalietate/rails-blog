@@ -1,18 +1,17 @@
-<h1>View Post</h1>
+  <h1><%= @post.title %></h1>
 
-<p><strong>Title:</strong>
-<%= @post.title %>
-</p>
-
-<p><strong>Content:</strong>
+<p>
   <%= @post.text %>
 </p>
 
-<h2>Comments</h2>
+<em>Posted by: <%= @post.user.name %></em>
+<h3>Comments</h3>
 <%= render @post.comments %>
 
-<h2>Add Your Comment:</h2>
+<h3>Add Your Own Comment:</h3>
 <%= render 'comments/form' %>
 <br>
-<%= link_to 'Edit Post', edit_post_path %> -
+<% if @post.user_id == current_user.id %>
+  <%= link_to 'Edit Post', edit_post_path %> -
+<% end %>
 <%= link_to 'Go Back', posts_path %>
