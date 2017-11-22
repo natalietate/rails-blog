@@ -7,6 +7,7 @@
 <%= post.title %><br>
 <%= post.text %><br>
 Posted by: <%= post.user.name %>
+
 <br>
 <%= link_to 'Comments', post_path(post) %>
 <% if post.user_id == current_user.id %>
