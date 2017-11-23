@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="navbar">
       <%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %>
       <% if !logged_in? %>
         <%= link_to 'Sign up', '/signup' %>
