@@ -1,6 +1,9 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lato|Spicy+Rice');
 
+$primary-color: #CD5C5C;
+
+
 /* Universal styles */
 body {
 font-family: 'Lato'
@@ -59,7 +62,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #CD5C5C;
+  color: $primary-color;
   padding-top: 9px;
   font-weight: bold;
   font-family: 'Spicy Rice';
@@ -73,7 +76,7 @@ p {
   color: black;
   text-decoration: none;
   &:hover {
-    color: #CD5C5C;
+    color: $primary-color;
   }
 }
 
@@ -81,7 +84,7 @@ p {
 .post-link {
   color: #000;
     &:hover {
-      color: #CD5C5C;
+      color: $primary-color;
       text-decoration: none;
     }
 }
