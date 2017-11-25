@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand"><%= link_to "FoodStuff", '/posts', id: 'logo' if logged_in?%>
+      <%= link_to "FoodStuff", '/', id: 'logo' if !logged_in?%>
+    </div>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %></li>
+        <% if !logged_in? %>
+          <li><%= link_to 'Sign up', '/signup' %></li>
+          <li><%= link_to 'Log in', '/login' %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

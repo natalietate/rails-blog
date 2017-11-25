@@ -1,1 +1,68 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato|Spicy+Rice');
+
+/* Universal styles */
+body {
+font-family: 'Lato'
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* Typography styling */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Spicy Rice'
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Spicy Rice';
+  color: #777;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+#notice {
+  background-color: #FFD700;
+  text-align: center;
+}
+
+/* Header styling */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #CD5C5C;
+  padding-top: 9px;
+  font-weight: bold;
+  font-family: 'Spicy Rice';
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}

@@ -9,20 +9,8 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "FoodStuff", '/', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %></li>
-            <% if !logged_in? %>
-              <li><%= link_to 'Sign up', '/signup' %></li>
-              <li><%= link_to 'Log in', '/login' %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/navbar' %>
+
     <div class="container">
       <p id="notice"><%= notice %></p>
 
