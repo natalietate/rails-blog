@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>FoodStuff</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class="navbar">
-      <%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %>
-      <% if !logged_in? %>
-        <%= link_to 'Sign up', '/signup' %>
-        <%= link_to 'Log in', '/login' %>
-      <% end %>
-    </nav>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "FoodStuff", '/', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %></li>
+            <% if !logged_in? %>
+              <li><%= link_to 'Sign up', '/signup' %></li>
+              <li><%= link_to 'Log in', '/login' %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
 
-    <p id="notice"><%= notice %></p>
-
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>
