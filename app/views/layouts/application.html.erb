@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>FoodStuff</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class="navbar">
-      <%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %>
-      <% if !logged_in? %>
-        <%= link_to 'Sign up', '/signup' %>
-        <%= link_to 'Log in', '/login' %>
-      <% end %>
-    </nav>
+    <%= render 'layouts/navbar' %>
 
-    <p id="notice"><%= notice %></p>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>
