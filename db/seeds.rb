@@ -35,7 +35,7 @@ Post.create(
 )
 Post.create(
   title: 'Favorite cheese?',
-  text: 'Hello friends, Jeffry and I have been discussing this as of late. Which cheese do you prefer when you\'re having friends over for dinner?',
+  text: 'Hello friends, Jeffrey and I have been discussing this as of late. Which cheese do you prefer when you\'re having friends over for dinner?',
   user_id: 2
 )
 Post.create(
@@ -70,4 +70,14 @@ Comment.create(
   body: 'The guy above is nuts. Who eats American cheese over the age of 5? My favorite cheeses are from around the world, like mozarella straight from Italy.',
   post_id: 2,
   user_id: 3
+)
+Comment.create(
+  body: 'Fire him.',
+  post_id: 3,
+  user_id: 1
+)
+Comment.create(
+  body: 'Maybe he just needs more time. Try asking him what\'s going on!',
+  post_id: 3,
+  user_id: 2
 )
