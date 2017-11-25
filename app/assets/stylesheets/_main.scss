@@ -24,19 +24,17 @@ textarea {
 /* Typography styling */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  margin-top: 30px
 }
 
 h1 {
   font-size: 3em;
-  margin-bottom: 30px;
-  text-align: center;
   font-family: 'Spicy Rice'
 }
 
-h2 {
+
+h3 {
   font-size: 1em;
-  margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
   font-family: 'Spicy Rice';
   color: #777;
@@ -50,6 +48,10 @@ p {
 #notice {
   background-color: #FFD700;
   text-align: center;
+}
+
+.hidden{
+  display: none;
 }
 
 /* Header styling */
@@ -75,4 +77,18 @@ p {
   }
 }
 
-/* Forms */
+/* Posts */
+.post-link {
+  color: #000;
+    &:hover {
+      color: #CD5C5C;
+      text-decoration: none;
+    }
+}
+
+/* Comments */
+.comment-display {
+  border: solid #777 1px;
+  border-radius: 8px;
+  padding: 8px 15px 8px 15px
+}

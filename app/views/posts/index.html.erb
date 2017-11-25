@@ -1,14 +1,14 @@
 <div class="post-index">
-  <h3>Welcome, <%= current_user.name %>!</h3>
+  <h2>Welcome, <%= current_user.name %>!</h2>
   <br>
   <%= link_to 'Create New Post', new_post_path, class: 'btn btn-dark btn-sm' %>
   <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'btn btn-outline-dark btn-sm' %>
 
   <br>
-  <h1>Recent Posts on FoodStuff:</h1>
+  <h2>Recent Posts on FoodStuff:</h2>
   <br>
   <% @posts.each do |post| %>
-    <%= link_to post.title, post_path(post), class: 'post-link'%><br>
+    <strong><%= link_to post.title, post_path(post), class: 'post-link'%></strong><br>
     <em>Posted by: <%= post.user.name %></em>
         <br>
     <% if post.user_id == current_user.id %>
