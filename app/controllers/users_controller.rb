@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate, only: [:edit, :update]
+  before_action :authenticate, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   def new
     @user = User.new
@@ -31,6 +31,12 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    get_user
+    @user.destroy
+    redirect_to '/', notice: 'Your account has been successfully deleted. We\'ll miss you!'
   end
 
   private

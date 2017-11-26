@@ -4,6 +4,8 @@
   <%= render 'form' %>
 
   <br>
-  <%= link_to 'Go Back', posts_path %>
+  <%= link_to "Delete Account", current_user, method: :delete, data: { confirm: "You sure? There's no going back!" }, class: 'btn btn-outline-secondary btn-sm' %>
+
+  <%= link_to 'Go Back', posts_path, class: 'btn btn-outline-secondary btn-sm' %>
 
 </div>
