@@ -28,5 +28,10 @@ class ApplicationController < ActionController::Base
     redirect_to '/posts' unless @user == current_user
   end
 
-  helper_method :sign_in, :current_user, :logged_in?, :authenticate, :correct_user
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
+  end
+
+  helper_method :sign_in, :current_user, :logged_in?, :authenticate, :correct_user, :log_out
 end

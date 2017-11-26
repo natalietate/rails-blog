@@ -5,7 +5,10 @@
     </div>
     <nav class="buttons">
       <ul class="nav">
-        <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in?%></li>
+        <% if logged_in? %>
+          <li class="nav-item"><%= link_to 'Profile', edit_user_path(current_user), class: "nav-link" %></li>
+          <li class="nav-item"><%=  link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
+        <% end %>
         <% if !logged_in? %>
           <li class="nav-item"><%= link_to 'Sign up', '/signup', class: "nav-link" %></li>
           <li class="nav-item"><%= link_to 'Log in', '/login', class: "nav-link" %></li>
