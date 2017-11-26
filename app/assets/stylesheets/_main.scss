@@ -93,5 +93,14 @@ p {
 .comment-display {
   border: solid #777 1px;
   border-radius: 8px;
-  padding: 8px 15px 8px 15px
+  padding: 8px 15px 8px 15px;
+  width: 70%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .comment-display{
+      width: 100%;
+  }
 }
