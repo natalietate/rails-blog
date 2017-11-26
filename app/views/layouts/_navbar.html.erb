@@ -4,11 +4,11 @@
       <%= link_to "FoodStuff", '/', id: 'logo' if !logged_in?%>
     </div>
     <nav class="buttons">
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in? %></li>
+      <ul class="nav">
+        <li><%= link_to 'Log Out', '/logout', { method: 'post', local: true } if logged_in?%></li>
         <% if !logged_in? %>
-          <li><%= link_to 'Sign up', '/signup' %></li>
-          <li><%= link_to 'Log in', '/login' %></li>
+          <li class="nav-item"><%= link_to 'Sign up', '/signup', class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to 'Log in', '/login', class: "nav-link" %></li>
         <% end %>
       </ul>
     </nav>
