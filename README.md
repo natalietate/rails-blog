@@ -25,6 +25,7 @@ FoodStuff is a simple and fully functional blogging app built using Ruby on Rail
   * Rails v. 5.1.4
   * Ruby v. 2.4.2
   * SQLite v. 3.19.3
+  * Bootstrap 4
 
 
 **Run on your computer:**
