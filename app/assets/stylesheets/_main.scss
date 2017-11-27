@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Spicy+Rice');
 
 $primary-color: #CD5C5C;
+$secondary-color: #F5F5F5;
 
 
 /* Universal styles */
@@ -9,19 +10,20 @@ body {
 font-family: 'Lato'
 }
 
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
   }
+}
+
+#notice {
+  background-color: #FFD700;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
 }
 
 /* Typography styling */
@@ -40,21 +42,12 @@ h3 {
   font-size: 1em;
   font-weight: normal;
   font-family: 'Spicy Rice';
-  color: #777;
+  color: $primary-color;
 }
 
 p {
   font-size: 1em;
   line-height: 1.5em;
-}
-
-#notice {
-  background-color: #FFD700;
-  text-align: center;
-}
-
-.hidden{
-  display: none;
 }
 
 /* Header styling */
@@ -73,14 +66,14 @@ p {
 }
 
 .buttons a {
-  color: black;
+  color: #000;
   text-decoration: none;
   &:hover {
     color: $primary-color;
   }
 }
 
-/* Posts */
+/* Post Styling */
 .post-link {
   color: #000;
     &:hover {
@@ -89,15 +82,24 @@ p {
     }
 }
 
-/* Comments */
-.comment-display {
-  border: solid #777 1px;
-  border-radius: 8px;
-  padding: 8px 15px 8px 15px;
-  width: 70%;
+.post-box, .post-form {
+  width: 80%;
+  border-top: 4px solid $primary-color;
+  background-color: $secondary-color;
+  margin: 0 auto;
+  padding: 5px;
 }
 
-/* Media Queries */
+/* Comment Styling */
+.comment-display, .comment-form {
+  width: 80%;
+  border-left: solid $primary-color 2px;
+  background-color: $secondary-color;
+  margin: 0 auto;
+  padding: 8px 15px 8px 15px;
+}
+
+/* Add'l Media Queries */
 
 @media screen and (max-width: 900px) {
   .comment-display{
