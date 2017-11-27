@@ -9,7 +9,7 @@
   <% @posts.reverse_each do |post| %>
     <div class="post-box center">
       <strong><%= link_to post.title, post_path(post), class: 'post-link'%></strong><br>
-      <em>Posted by: <%= post.user.name %></em>
+      <em>Posted by: <%= link_to post.user.name, user_path(post.user.id) %></em>
       <br>
       <p>Posted on: <%= (post.created_at).localtime.strftime("%B %d, %Y %I:%M %p")%></p>
       <!-- Allow user to edit or remove only if they authored the post -->

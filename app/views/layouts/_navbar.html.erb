@@ -10,8 +10,7 @@
           <li class="nav-item"><%= link_to 'Create New Post', new_post_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'Profile', edit_user_path(current_user), class: 'nav-link' %></li>
           <li class="nav-item"><%=  link_to 'Log out', logout_path, method: :delete, class: 'nav-link' %></li>
-        <% end %>
-        <% if !logged_in? %>
+        <% else %>
           <li class="nav-item"><%= link_to 'Sign up', '/signup', class: "nav-link" %></li>
           <li class="nav-item"><%= link_to 'Log in', '/login', class: "nav-link" %></li>
         <% end %>
