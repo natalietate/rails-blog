@@ -17,6 +17,7 @@ class PostsController < ApplicationController
     get_post
   end
 
+  # create new post where user ID is equal to the current user's user ID
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
@@ -27,6 +28,7 @@ class PostsController < ApplicationController
     end
   end
 
+  # edit post
   def update
     get_post
 
@@ -40,15 +42,13 @@ class PostsController < ApplicationController
   def destroy
     get_post
     @post.destroy
-
     redirect_to posts_path
   end
 
   private
-
   def get_post
-  @post = Post.find(params[:id])
-end
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)

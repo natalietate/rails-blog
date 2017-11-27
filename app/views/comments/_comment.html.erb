@@ -1,11 +1,11 @@
-<div class="comment-display">
+<div class="comment-display center">
     <%= comment.body %>
   <br>
     <strong>Posted by: </strong>
     <%= comment.user.name %>
   <br>
     <% if comment.user_id == current_user.id %>
-  <%= link_to 'Remove Comment', [comment.post, comment], method: :delete, class: 'btn btn-outline-secondary btn-sm', data: { confirm: 'Are you sure?'} %>
-  <% end %>
+    <!-- Only display if comment belongs to logged in user -->
+      <%= link_to 'Remove Comment', [comment.post, comment], method: :delete, class: 'btn btn-outline-secondary btn-sm', data: { confirm: 'Are you sure?'} %>
+    <% end %>
 </div>
-<br>

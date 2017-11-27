@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # Log in the use
+  # Log in the user
   def sign_in
     session[:user_id] = @user.id
   end
@@ -23,11 +23,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # confirms we have the right user accessing method
   def correct_user
     @user = User.find(params[:id])
     redirect_to '/posts' unless @user == current_user
   end
 
+  # logs out user
   def log_out
     session.delete(:user_id)
     @current_user = nil

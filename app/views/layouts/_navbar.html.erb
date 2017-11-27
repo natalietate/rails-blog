@@ -1,11 +1,12 @@
 <header class="navbar navbar-fixed-top">
   <div class="container">
-    <div class="navbar-brand"><%= link_to "FoodStuff", '/posts', id: 'logo' if logged_in?%>
+    <div class="navbar-brand">
+      <%= link_to "FoodStuff", '/posts', id: 'logo' if logged_in?%>
       <%= link_to "FoodStuff", '/', id: 'logo' if !logged_in?%>
     </div>
     <nav class="buttons">
       <ul class="nav">
-        <% if logged_in? %>
+        <% if logged_in? %> 
           <li class="nav-item"><%= link_to 'Profile', edit_user_path(current_user), class: "nav-link" %></li>
           <li class="nav-item"><%=  link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
         <% end %>
