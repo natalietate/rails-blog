@@ -45,6 +45,18 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def upvote
+    get_post
+    @post.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    get_post
+    @post.downvote_by current_user
+    redirect_to :back
+  end
+
   private
   def get_post
     @post = Post.find(params[:id])
